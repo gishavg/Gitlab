@@ -33,5 +33,11 @@ describe StringCalculator do
         StringCalculator.add("1,-2,3")
       }.to raise_error(ArgumentError, "negative numbers not allowed: -2")
     end
+
+    it "raises error with all negative numbers listed" do
+      expect {
+        StringCalculator.add("1,-4,3,-2")
+      }.to raise_error(ArgumentError, "negative numbers not allowed: -4,-2")
+    end
   end
 end
