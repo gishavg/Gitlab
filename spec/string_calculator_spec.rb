@@ -8,8 +8,12 @@ describe StringCalculator do
       expect(StringCalculator.add("")).to eq(0)
     end
 
-    it 'return the number for single input' do
+    it "return the number for single input" do
       expect(StringCalculator.add("5")).to eq(5)
+    end
+
+    it "returns sum of two numbers" do
+      expect(StringCalculator.add("1,5")).to eq(6)
     end
   end
 end
